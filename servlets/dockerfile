@@ -1,0 +1,11 @@
+# initialize base image
+from tomcat:8.0-jre8
+
+# copy over war to tomcat server in image
+add target/servlets.war /usr/local/tomcat/webapps
+
+#open port 8080 for access
+expose 8080
+
+# start tomcat
+cmd ["catalina.sh","run"]
