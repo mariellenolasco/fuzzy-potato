@@ -35,7 +35,7 @@ jobs:
         password: ${{secrets.DOCKER_TOKEN}}
     - name: Build Server image
       run: docker build -t mariellenolasco/servlets -f
-                 ./servlets/Dockerfile ./servlets
+                 ./servlets/dockerfile ./servlets
     - name: Tag our Image
       run: docker tag mariellenolasco/servlets
                  mariellenolasco/servlets:latest
